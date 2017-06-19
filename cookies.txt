@@ -1,0 +1,3 @@
+#LWP-Cookies-2.0
+Set-Cookie3: RedoA=IRus2wzhd536LwbR22sFhf7k8gI; path="/"; domain=".wopelis.com"; path_spec; domain_dot; expires="2018-04-12 11:55:57Z"; HttpOnly=None; version=0
+Set-Cookie3: userPrefLanguage=en_GB; path="/"; domain="www.wopelis.com"; path_spec; expires="2066-12-17 07:54:44Z"; HttpOnly=None; version=0
