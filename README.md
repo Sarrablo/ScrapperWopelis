@@ -1,7 +1,8 @@
 # ScrapperWopelis
 Scraper simple de links de wopelis, para alamacenarlos en local o lo que se necesite.
 
-IMPORTANTE: Python 2.7
+IMPORTANTE: Python 2.7 
+
 Dependencias: mechanize, cookielib, bs4, re, time
 
 # Funcionamiento
