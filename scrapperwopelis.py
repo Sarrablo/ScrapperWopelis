@@ -6,6 +6,7 @@ import re
 import time
 
 class ScrapperWopelis():
+    
     def __init__(self,cookies_path):
         self.br = mechanize.Browser()
         self.cj = cookielib.LWPCookieJar()
@@ -16,6 +17,7 @@ class ScrapperWopelis():
         self.br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; es-VE; rv:1.9.0.1)Gecko/2008071615 Debian/6.0 Firefox/9')]
         self.br.addheaders = [('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')]
         self.br.open('http://www.wopelis.com')
+
 
     def getAllLinks(self,html):
         links = []    
@@ -28,7 +30,7 @@ class ScrapperWopelis():
                         j = x['onclick'][6:-2].split(',')
                         links.append(j[0].replace("'", ""))        # here you can do your stuff instead of print
                 except:pass
-        pretifyToHtml(title, links)
+        return title, links
 
 
     def getHtml(self,url):
@@ -39,8 +41,8 @@ class ScrapperWopelis():
 
     def showLinks(self,url):
         
-        self.getAllLinks(self.getHtml(url))
         
+        self.pretifyToHtml(self.getAllLinks(self.getHtml(url)))
 
     def getFullSerie(self,url):
         start_time = time.time()
@@ -193,4 +195,5 @@ class ScrapperWopelis():
         f = open(title.replace(' ','_') + '.html','w')
         f.write( html )
         f.close()
+
 
